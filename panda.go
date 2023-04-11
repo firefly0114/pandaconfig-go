@@ -77,3 +77,7 @@ func (p *Parser) loadConfigFile() error {
 	return err
 
 }
+
+func (p *Parser) getEnvValue(name string) (string, bool) {
+	return os.LookupEnv(name)
+}
